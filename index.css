@@ -322,14 +322,12 @@ body
 
 .afisha > div
 {
-    display: flex;
-    flex-direction: row;
     margin-bottom: 10px;
 }
 
 .afisha > div > span:first-child
 {
-    display: block;
+    display: inline;
     max-width: 160px;
     overflow: hidden;
     white-space: nowrap;
