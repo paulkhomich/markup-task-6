@@ -1,0 +1,392 @@
+html
+{
+    font-size: 13px;
+}
+
+body
+{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout
+{
+    display: grid;
+    grid-template-columns: 1fr 16px 256px 16px 256px 16px 256px 16px 1fr;
+    grid-template-rows: 72px 184px 32px 96px 16px 96px 32px auto;
+    grid-template-areas: 'c g g g g g g z a'
+        'c b b b b Q C z a'
+        'c o x x x x x z a'
+        'l o s s s s s z a'
+        'F o y y y y y z a'
+        'F o r r r r r z a'
+        'F o j j j j j z a'
+        'F o i L m P q z a';
+}
+
+.topSpace
+{
+    grid-area: g;
+    background: white;
+}
+
+.rightSpace
+{
+    grid-area: a;
+    margin: 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.userCard
+{
+    width: 148px;
+    background-color: white;
+    box-shadow: 0 0 5px #999;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.userCard::first-letter
+{
+    color: red;
+}
+
+.news
+{
+    grid-area: b;
+}
+
+.newsTitle
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: #999;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 16px;
+}
+
+.newsTitle > div:not([class='date'])
+{
+    color: #0054b9;
+    font-size: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.newsTitle > div:not([class='date']):hover
+{
+    color: #c00;
+}
+
+.newsContent
+{
+    position: relative;
+}
+
+.newsContent > span
+{
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.newsContent > span:hover
+{
+    color: #c00;
+}
+
+.newsContent > span::before
+{
+    margin-left: 6px;
+    margin-right: 6px;
+    content: '•';
+    color: black;
+}
+
+.newsFin
+{
+    margin-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.newsFin > div
+{
+    margin-right: 16px;
+}
+
+.newsFin > div > span:first-child
+{
+    font-weight: bold;
+}
+
+.leftSpace
+{
+    grid-area: c;
+}
+
+.leftSpace > span
+{
+    position: absolute;
+    left: 36px;
+    top: 24px;
+    color: #999;
+    cursor: pointer;
+}
+
+.leftSpace > span:hover
+{
+    color: red;
+}
+
+.search
+{
+    grid-area: s;
+}
+
+.searchTitle
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    line-height: 36px;
+}
+
+.searchTitle > div
+{
+    font-size: 15px;
+    margin-right: 20px;
+    color: #0054b9;
+    cursor: pointer;
+}
+
+.searchTitle > div:hover
+{
+    color: #c00;
+}
+
+.searchInput
+{
+    display: flex;
+    align-items: center;
+}
+
+.input
+{
+    border: 2px solid #fc0;
+    width: 720px;
+    height: 30px;
+    margin-left: 2px;
+    padding-left: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.button
+{
+    width: 80px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    background: #fc0;
+}
+
+.arrow
+{
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left-color: #fc0;
+    border-right: 0;
+}
+
+.searchHelp
+{
+    line-height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.advert
+{
+    grid-area: r;
+    background: black;
+}
+
+.info1
+{
+    grid-area: i;
+}
+
+.poseshaemoe > div
+{
+    margin-bottom: 10px;
+}
+
+.poseshaemoe > div > span:first-child
+{
+    font-weight: bold;
+}
+
+.anekdot
+{
+    height: 180px;
+}
+
+.gradientBox
+{
+    color: white;
+    width: 80px;
+    border-radius: 4px;
+    line-height: 24px;
+    text-align: center;
+    margin-left: 16px;
+    background-image: linear-gradient(to right,
+    rgb(49, 166, 245),
+    rgb(169, 107, 240));
+}
+
+.info2
+{
+    grid-area: m;
+}
+
+.tv > div:not(:first-child)
+{
+    margin-bottom: 10px;
+}
+
+.tvTitle
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.shadowTop
+{
+    width: 100%;
+    box-shadow: 0 -2px 10px 10px white;
+    z-index: 1000;
+}
+
+.prokrutka
+{
+    height: 240px;
+    background: #fff;
+    overflow: scroll;
+}
+
+.prokrutka > div
+{
+    margin-bottom: 10px;
+}
+
+.prokrutka > div > span:last-child
+{
+    color: #999;
+    font-size: 10px;
+}
+
+.info3
+{
+    grid-area: q;
+}
+
+.infoBox
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.maps > .titleBlue ~ span
+{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.afisha > div
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.afisha > div > span:first-child
+{
+    display: block;
+    max-width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.box
+{
+    grid-area: C;
+    display: flex;
+    flex-direction: column;
+}
+
+.box > img
+{
+    max-height: 120px;
+    max-width: 120px;
+}
+
+.titleBlue
+{
+    font-size: 18px;
+    color: #0054b9;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.titleBlue:hover
+{
+    color: #c00;
+}
+
+.logo
+{
+    grid-area: l;
+    text-align: right;
+}
+
+.logo > img
+{
+    height: 60px;
+    margin-top: 18px;
+}
+
+.linkTo
+{
+    color: #999;
+    cursor: pointer;
+}
+
+.linkTo:hover
+{
+    color: #c00;
+}
+
+.linkTo::before
+{
+    content: ' ';
+}
